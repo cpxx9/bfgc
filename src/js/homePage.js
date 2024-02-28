@@ -1,3 +1,5 @@
+import HomeVideo from '../assets/vid/BFGC.mp4';
+
 // SET HOW MANY PANELS FOR HOME PAGE
 const HOMEPANELS = 5;
 
@@ -22,6 +24,14 @@ function memberPanel(panel) {
 }
 
 function videoPanel(panel) {
+  const innerPanel = document.createElement('video');
+  innerPanel.src = HomeVideo;
+  innerPanel.autoplay = true;
+  innerPanel.loop = true;
+  innerPanel.muted = true;
+  innerPanel.playsInline = true;
+  
+  panel.appendChild(innerPanel);
   content.appendChild(panel);
 }
 
