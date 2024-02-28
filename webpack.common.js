@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Goose's Goulash",
+      title: "Bloomfield Fish & Game Club",
       filename: 'index.html',
       template: 'src/template.html',
     }),

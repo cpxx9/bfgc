@@ -1,4 +1,4 @@
-const HOMEPANELS = 8;
+const HOMEPANELS = 4;
 function loadHomePage() {
   const content = document.querySelector('#content');
   for (let i = 0; i < 8; i++) {
