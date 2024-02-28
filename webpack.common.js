@@ -30,6 +30,10 @@ module.exports = {
         type: 'asset/resource',
       },
       {
+        test: /\.mp4$/i,
+        type: 'asset/resource',
+      },
+      {
         test: /\.js$/i,
         exclude: /node_modules/,
         use: {
