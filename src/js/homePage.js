@@ -1,4 +1,6 @@
+import L from "leaflet";
 import HomeVideo from '../assets/vid/BFGC.mp4';
+import 'leaflet/dist/leaflet.css';
 
 // SET HOW MANY PANELS FOR HOME PAGE
 const HOMEPANELS = 5;
@@ -102,8 +104,16 @@ function contactPanel(panel) {
 }
 
 function mapPanel(panel) {
-  
+  const mapCanvas = document.createElement('div');
+  mapCanvas.id = "mapCanvas";
+  panel.appendChild(mapCanvas);
   content.appendChild(panel);
+
+  const map = L.map('mapCanvas').setView([41.87, -72.76], 13);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);  
 }
 
 function loadHomePage() {
