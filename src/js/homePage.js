@@ -111,7 +111,9 @@ function mapPanel(panel) {
   panel.appendChild(mapCanvas);
   content.appendChild(panel);
 
-  const map = L.map('mapCanvas').setView([41.87, -72.76], 13);
+  const map = L.map('mapCanvas').setView([41.86818963620112, -72.76401037272284], 14);
+
+  const marker = L.marker([41.86818963620112, -72.76401037272284]).addTo(map);
 
   L.Control.MyControl = L.Control.extend({
     onAdd: function(map) {
