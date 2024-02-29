@@ -1,5 +1,6 @@
 import L from "leaflet";
 import HomeVideo from '../assets/vid/BFGC.mp4';
+import MapBoxLogo from '../assets/img/mapbox-logo-black.svg';
 import 'leaflet/dist/leaflet.css';
 
 // SET HOW MANY PANELS FOR HOME PAGE
@@ -106,13 +107,40 @@ function contactPanel(panel) {
 function mapPanel(panel) {
   const mapCanvas = document.createElement('div');
   mapCanvas.id = "mapCanvas";
+
   panel.appendChild(mapCanvas);
   content.appendChild(panel);
 
   const map = L.map('mapCanvas').setView([41.87, -72.76], 13);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+  L.Control.MyControl = L.Control.extend({
+    onAdd: function(map) {
+      var el = document.createElement('img');
+  
+      el.src = MapBoxLogo;
+      el.width = 80;
+      el.height = 20;
+  
+      return el;
+    },
+  
+    onRemove: function(map) {
+      // Nothing to do here
+    }
+  });
+  
+  L.control.myControl = function(opts) {
+    return new L.Control.MyControl(opts);
+  }
+  
+  L.control.myControl({
+    position: 'bottomleft'
+  }).addTo(map);
+
+  L.tileLayer('https://api.mapbox.com/styles/v1/cjplabs1/clt6g56j600it01qp7vvqfakj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiY2pwbGFiczEiLCJhIjoiY2x0NmcyNzFqMGIzZDJ3bzJ1eGVmdGxqZyJ9.aU0yeew5JEiw6RlZR4mvZw', {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    prefix: `<img src='${MapBoxLogo}' class='mapbox-logo'>`,
+    attribution: `&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a><a href="https://www.mapbox.com/map-feedback/#/-74.5/40/10"> Improve this map</a>`
 }).addTo(map);  
 }
 

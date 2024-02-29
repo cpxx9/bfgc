@@ -1,4 +1,25 @@
 #mapCanvas {
     width: 100%;
-    height: 350px;
+    height: 500px;
+}
+
+.panel-4 {
+  position: relative;
+}
+
+.mapbox-logo {
+  position: absolute;
+  height: 20px;
+  width: 80px;
+  left: 20px;
+  bottom: 10px;
+}
+
+.leaflet-bottom,
+.leaflet-right {
+  position: static;
+}
+
+.leaflet-control-container {
+  position: static;
 }
