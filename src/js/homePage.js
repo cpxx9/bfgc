@@ -125,10 +125,6 @@ function mapPanel(panel) {
   
       return el;
     },
-  
-    onRemove: function(map) {
-      // Nothing to do here
-    }
   });
   
   L.control.myControl = function(opts) {
