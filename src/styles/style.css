@@ -51,16 +51,39 @@ h3 {
 	font-size: 2rem;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+/* MEMBER PANEL
+-------------------------------------------------- */
+.panel-0 {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+  background-color: var(--gray-m);
+  height: 40px;
+}
+
+.panel-0 h3 {
+  font-size: 1.1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
 /* HEADER
 -------------------------------------------------- */
 header {
   position: sticky;
   top: -1px;
   display: flex;
-  background: var(--gray-3);
+  background: var(--gray-4);
   justify-content: space-between;
   padding: 25px 50px;
   align-items: center;
+  transition: opacity .7s;
+  z-index: 7;
 }
 
 header button {
@@ -72,8 +95,8 @@ header button {
 }
 
 header button:hover {
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
 }
 
 nav {
@@ -93,8 +116,13 @@ button.nav-btn {
   letter-spacing: .12em;
 }
 
-.active-btn {
+button.active-btn {
   font-weight: 600;
+}
+
+.is-pinned {
+  transition: opacity .7s;
+  opacity: .9;
 }
 
 /* VIDEO PANEL
@@ -103,6 +131,18 @@ button.nav-btn {
   height: 80dvh;
   width: 100%;
   object-fit: fill;
+}
+
+/* VIDEO PANEL
+-------------------------------------------------- */
+.panel-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.panel-2 button {
+  border: none;
+  background: none;
 }
 
 /* MAP PANEL

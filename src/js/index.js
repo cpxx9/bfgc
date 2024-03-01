@@ -10,7 +10,27 @@ let functions = {
   contact: loadContactPage,
   about: loadAboutPage,
 };
+
 loadHomePage();
+
+const header = document.querySelector('.main-header');
+const observer = new IntersectionObserver(
+  ([e]) => {
+    e.target.classList.toggle('is-pinned', e.intersectionRatio < 1);
+    let panelZero = document.querySelector('.panel-0');
+    let memberTitle = document.querySelector('.panel-0 h3');
+    console.log(memberTitle);
+    if(e.intersectionRatio < 1) {
+      memberTitle.hidden = true;
+      panelZero.hidden = true;
+    } else {
+      memberTitle.hidden = false;
+      panelZero.hidden = false;
+    }
+  },
+  { threshold: [1] }
+);
+observer.observe(header);
 
 document.addEventListener('click', function(e) {
   if(e.target.classList.contains('nav-btn')) {
