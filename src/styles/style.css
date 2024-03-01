@@ -114,6 +114,7 @@ button.active-btn {
   gap: 28px;
   align-items: center;
   padding: 50px 0px;
+  background-color: var(--gray-2);
 }
 
 .connect-footer hr {
