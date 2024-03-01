@@ -155,6 +155,10 @@ function mapPanel(panel) {
 }
 
 function loadHomePage() {
+  const oldFooter = document.querySelector('.connect-footer');
+  if(oldFooter){
+    oldFooter.remove()
+  };
   memberPanel(panels[0]);
   videoPanel(panels[1]);
   facebookPanel(panels[2]);
