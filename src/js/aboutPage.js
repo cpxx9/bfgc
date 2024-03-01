@@ -33,14 +33,12 @@ function loadAboutPage() {
   container.appendChild(cardsContainer);
 
   const domCards = document.querySelectorAll('.card');
-  console.log(domCards);
   domCards.forEach((card) => {
     let cardImage = document.createElement('img');
     let cardTitle = document.createElement('h3');
     let cardInfo = document.createElement('p');
     let cardButton = document.createElement('button');
-    cardButton.textContent = "LEARN MORE"
-    console.log('test');
+    cardButton.textContent = "LEARN MORE";
     card.appendChild(cardImage);
     card.appendChild(cardTitle);
     card.appendChild(cardInfo);
