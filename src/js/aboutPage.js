@@ -8,8 +8,12 @@ function loadAboutPage() {
   aboutTitle.textContent = "About Our Club";
   const aboutTitleSplit = document.createElement('hr');
 
+  const mainCard = document.createElement('div');
+  mainCard.classList.add('card', 'main-card');
+
   container.appendChild(aboutTitle);
   container.appendChild(aboutTitleSplit);
+  container.appendChild(mainCard);
 }
 
 export { loadAboutPage };
