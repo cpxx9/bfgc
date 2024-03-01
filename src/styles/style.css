@@ -20,9 +20,7 @@ html {
 	box-sizing: inherit;
 }
 
-html, body {
-	height: 100%;
-}
+
 
 body{
 	background: #f4f4f4;
@@ -143,6 +141,7 @@ button.active-btn {
   display: flex;
   justify-content: center;
   background-color: var(--gray-4);
+  padding: 60px 0px;
 }
 
 .panel-2 button {
@@ -150,7 +149,42 @@ button.active-btn {
   background: none;
 }
 
-.panel-2 svg {
+.panel-2 svg{
+  width: 50px;
+  height: 50px;
+}
+
+/* CONTACT PANEL
+-------------------------------------------------- */
+.panel-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0px;
+  gap: 16px;
+}
+
+.contact-panel-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 36px;
+}
+
+.contact-panel-address {
+  text-align: center;
+}
+
+.contact-panel-interest {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-panel-interest p {
+  padding: 0;
+  margin: 0;
 }
 
 /* MAP PANEL
@@ -179,4 +213,14 @@ button.active-btn {
 
 .leaflet-control-container {
   position: static;
+}
+
+/* FOOTER
+-------------------------------------------------- */
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0px;
+  background-color: var(--gray-4);
+  color: var(--gray-2);
 }
