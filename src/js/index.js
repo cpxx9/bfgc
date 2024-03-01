@@ -19,7 +19,6 @@ const observer = new IntersectionObserver(
     e.target.classList.toggle('is-pinned', e.intersectionRatio < 1);
     let panelZero = document.querySelector('.panel-0');
     let memberTitle = document.querySelector('.panel-0 h3');
-    console.log(memberTitle);
     if(e.intersectionRatio < 1) {
       memberTitle.hidden = true;
       panelZero.hidden = true;

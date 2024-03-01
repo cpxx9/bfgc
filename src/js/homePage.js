@@ -2,6 +2,7 @@ import '../styles/home-page.css'
 import L, { map } from "leaflet";
 import HomeVideo from '../assets/vid/BFGC.mp4';
 import MapBoxLogo from '../assets/img/mapbox-logo-black.svg';
+import "leaflet/dist/images/marker-shadow.png";
 import 'leaflet/dist/leaflet.css';
 
 // SET HOW MANY PANELS FOR HOME PAGE
