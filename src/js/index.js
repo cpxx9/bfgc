@@ -13,11 +13,18 @@ let functions = {
 loadHomePage();
 
 document.addEventListener('click', function(e) {
-  //clear current page
-  let currentDOM = document.querySelector('#content');
-  currentDOM.innerHTML = '';
-  
-  //load new page
-  const module = e.target.dataset.module;
-  functions[module]();
+  if(e.target.classList.contains('nav-btn')) {
+    const buttons = document.querySelectorAll('.nav-btn');
+    buttons.forEach((btn) => {
+      btn.classList.remove('active-btn');
+    })
+    
+    const currentDOM = document.querySelector('#content');
+    currentDOM.innerHTML = '';
+
+    //load new page
+    const module = e.target.dataset.module;
+    functions[module]();
+    e.target.classList.add('active-btn');
+  }  
 });
