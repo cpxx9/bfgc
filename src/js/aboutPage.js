@@ -16,6 +16,7 @@ function loadAboutPage() {
   cardsContainer.classList.add('cards-container');
     const mainCard = document.createElement('div');
     mainCard.classList.add('card', 'main-card');
+
     const cards = document.createElement('div');
     cards.classList.add('cards');
   cardsContainer.appendChild(mainCard);
@@ -30,6 +31,21 @@ function loadAboutPage() {
 
   container.appendChild(titleContainer);
   container.appendChild(cardsContainer);
+
+  const domCards = document.querySelectorAll('.card');
+  console.log(domCards);
+  domCards.forEach((card) => {
+    let cardImage = document.createElement('img');
+    let cardTitle = document.createElement('h3');
+    let cardInfo = document.createElement('p');
+    let cardButton = document.createElement('button');
+    cardButton.textContent = "LEARN MORE"
+    console.log('test');
+    card.appendChild(cardImage);
+    card.appendChild(cardTitle);
+    card.appendChild(cardInfo);
+    card.appendChild(cardButton);
+  });
 }
 
 export { loadAboutPage };
