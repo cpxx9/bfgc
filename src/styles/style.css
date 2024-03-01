@@ -106,6 +106,26 @@ button.active-btn {
   opacity: .9;
 }
 
+/* CONNECT FOOTER
+-------------------------------------------------- */
+.connect-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  padding: 50px 0px;
+}
+
+.connect-footer hr {
+  margin: 0px 40%;
+}
+
+.connect-footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 /* FOOTER
 -------------------------------------------------- */
 footer {
