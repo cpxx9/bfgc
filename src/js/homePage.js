@@ -1,3 +1,4 @@
+import '../styles/home-page.css'
 import L, { map } from "leaflet";
 import HomeVideo from '../assets/vid/BFGC.mp4';
 import MapBoxLogo from '../assets/img/mapbox-logo-black.svg';
