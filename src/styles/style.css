@@ -68,6 +68,8 @@ button:hover {
   font-weight: 400;
   letter-spacing: 1px;
   color: #fff;
+  display: flex;
+  align-items: center;
 }
 
 /* HEADER
