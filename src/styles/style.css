@@ -127,8 +127,12 @@ button.active-btn {
 
 /* VIDEO PANEL
 -------------------------------------------------- */
-.home-video {
+.panel-1 {
   height: 80dvh;
+}
+
+.home-video {
+  height: 100%;
   width: 100%;
   object-fit: fill;
 }
@@ -138,11 +142,15 @@ button.active-btn {
 .panel-2 {
   display: flex;
   justify-content: center;
+  background-color: var(--gray-4);
 }
 
 .panel-2 button {
   border: none;
   background: none;
+}
+
+.panel-2 svg {
 }
 
 /* MAP PANEL
