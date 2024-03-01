@@ -1,10 +1,17 @@
 import '../styles/style.css';
 import { loadHomePage } from "./homePage";
+let functions = {
+  home: loadHomePage,
+};
+// loadHomePage();
 
-loadHomePage();
-
-let navButtons = document.querySelectorAll('.nav-btn');
-console.log(navButtons);
-navButtons.forEach((navButton) => {
-  navButton.addEventListener('click', navButton.dataset.function);
-})
+document.addEventListener('click', function(e) {
+  //clear current page
+  let currentDOM = document.querySelector('#content');
+  currentDOM.innerHTML = '';
+  
+  //load new page
+  const currentElement = e.target;
+  const module = currentElement.dataset.module;
+  functions[module]();
+});
