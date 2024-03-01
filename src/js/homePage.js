@@ -119,7 +119,9 @@ function mapPanel(panel) {
   panel.appendChild(mapCanvas);
   content.appendChild(panel);
 
-  let map = L.map('mapCanvas').setView([41.86818963620112, -72.76401037272284], 14);
+  let map = L.map('mapCanvas', {
+    scrollWheelZoom: false,
+  }).setView([41.86818963620112, -72.76401037272284], 14);
 
   L.marker([41.86818963620112, -72.76401037272284]).addTo(map);
 
