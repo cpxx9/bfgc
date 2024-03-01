@@ -30,6 +30,7 @@ function memberPanel(panel) {
 function videoPanel(panel) {
   panel.innerHTML = '';
   const innerPanel = document.createElement('video');
+  innerPanel.classList.add('home-video')
   innerPanel.src = HomeVideo;
   innerPanel.autoplay = true;
   innerPanel.loop = true;
