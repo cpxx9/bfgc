@@ -1,9 +1,16 @@
 import '../styles/style.css';
 import { loadHomePage } from "./homePage";
+import { loadGalleryPage } from "./galleryPage";
+import { loadContactPage } from "./contactPage";
+import { loadAboutPage } from "./aboutPage";
+
 let functions = {
   home: loadHomePage,
+  gallery: loadGalleryPage,
+  contact: loadContactPage,
+  about: loadAboutPage,
 };
-// loadHomePage();
+loadHomePage();
 
 document.addEventListener('click', function(e) {
   //clear current page
@@ -11,7 +18,6 @@ document.addEventListener('click', function(e) {
   currentDOM.innerHTML = '';
   
   //load new page
-  const currentElement = e.target;
-  const module = currentElement.dataset.module;
+  const module = e.target.dataset.module;
   functions[module]();
 });
