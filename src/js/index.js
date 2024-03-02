@@ -1,13 +1,13 @@
 import '../styles/style.css';
 import { loadHomePage } from "./homePage";
 import { loadGalleryPage } from "./galleryPage";
-import { loadContactPage } from "./contactPage";
+import { loadEventsPage } from "./eventsPage";
 import { loadAboutPage } from "./aboutPage";
 
 let functions = {
   home: loadHomePage,
   gallery: loadGalleryPage,
-  contact: loadContactPage,
+  contact: loadEventsPage,
   about: loadAboutPage,
 };
 
