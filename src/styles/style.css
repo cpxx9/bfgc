@@ -49,6 +49,17 @@ h3 {
 	font-size: 2rem;
 }
 
+.std-btn {
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--gray-m);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 button:hover {
   cursor: pointer;
 }

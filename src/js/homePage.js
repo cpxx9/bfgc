@@ -105,6 +105,7 @@ function contactPanel(panel) {
   contactPanels[1].appendChild(contactPanelAddress);
   
   const contactPanelButton = document.createElement('button');
+  contactPanelButton.classList.add('std-btn');
   contactPanelButton.textContent = "DROP US A LINE!";
 
   contactPanels[2].appendChild(contactPanelButton);

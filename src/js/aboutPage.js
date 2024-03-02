@@ -1,7 +1,7 @@
 import '../styles/about-page.css'
 import { loadConnectWithUs } from "./connectWithUs";
 
-const cards = [
+const cardArr = [
   {
     cardType: "main-card",
     title: "Club History",
@@ -56,16 +56,22 @@ function loadAboutPage() {
   container.appendChild(cardsContainer);
 
   const domCards = document.querySelectorAll('.card');
-  domCards.forEach((card) => {
-    let cardImage = document.createElement('img');
-    let cardTitle = document.createElement('h3');
-    let cardInfo = document.createElement('p');
-    let cardButton = document.createElement('button');
+  let cardCounter = 0;
+  domCards.forEach((card) => {    
+    const cardImage = document.createElement('img');
+    cardImage.src = cardArr[cardCounter].imgSrc;
+    const cardTitle = document.createElement('h3');
+    cardTitle.textContent = cardArr[cardCounter].title;
+    const cardInfo = document.createElement('p');
+    cardInfo.textContent = cardArr[cardCounter].info;
+    const cardButton = document.createElement('button');
+    cardButton.classList.add('std-btn');
     cardButton.textContent = "LEARN MORE";
     card.appendChild(cardImage);
     card.appendChild(cardTitle);
     card.appendChild(cardInfo);
     card.appendChild(cardButton);
+    cardCounter++;
   });
 }
 
