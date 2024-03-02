@@ -3,6 +3,7 @@ import L, { map } from "leaflet";
 import HomeVideo from '../assets/vid/BFGC.mp4';
 import MapBoxLogo from '../assets/img/mapbox-logo-black.svg';
 import "leaflet/dist/images/marker-shadow.png";
+import "leaflet/dist/images/marker-icon-2x.png";
 import 'leaflet/dist/leaflet.css';
 
 // SET HOW MANY PANELS FOR HOME PAGE
@@ -67,6 +68,7 @@ function contactPanel(panel) {
   //title panel
   const contactPanelTitle = document.createElement('h1');
     contactPanelTitle.textContent = "Contact Us";
+    contactPanelTitle.classList.add('page-heading');
     const contactPanelSplit = document.createElement('hr');
   contactPanels[0].appendChild(contactPanelTitle);
   contactPanels[0].appendChild(contactPanelSplit);
@@ -156,6 +158,7 @@ function mapPanel(panel) {
 }
 
 function loadHomePage() {
+  document.title = "Bloomfield Fish & Game Club";
   content.className = '';
   const oldFooter = document.querySelector('.connect-footer');
   if(oldFooter){

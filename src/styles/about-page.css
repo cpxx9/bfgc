@@ -15,10 +15,6 @@
   gap: 24px;
 }
 
-.title-container h1 {
-  font-size: 2.4em;
-}
-
 .title-container hr {
   margin: 0px 40%;
 }
@@ -46,10 +42,13 @@
 
 .card p {
   margin: 0;
+  font-size: 1.15em;
 }
 
 .card h3 {
   margin-top: 8px;
+  font-weight: 200;
+  font-size: 1.6em;
 }
 
 .card img {

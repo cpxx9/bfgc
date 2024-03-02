@@ -23,6 +23,8 @@ const cardArr = [
 ];
 
 function loadAboutPage() {
+  document.title = "About our club";
+
   loadConnectWithUs();
   const container = document.querySelector("#content");
   container.classList.add('about-page');
@@ -31,6 +33,7 @@ function loadAboutPage() {
   titleContainer.classList.add('title-container');
     const aboutTitle = document.createElement('h1');
     aboutTitle.textContent = "About Our Club";
+    aboutTitle.classList.add('page-heading')
     const aboutTitleSplit = document.createElement('hr');
   titleContainer.appendChild(aboutTitle);
   titleContainer.appendChild(aboutTitleSplit);
