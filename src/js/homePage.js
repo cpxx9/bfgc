@@ -155,6 +155,7 @@ function mapPanel(panel) {
 }
 
 function loadHomePage() {
+  content.className = '';
   const oldFooter = document.querySelector('.connect-footer');
   if(oldFooter){
     oldFooter.remove()

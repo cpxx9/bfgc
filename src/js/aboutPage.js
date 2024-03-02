@@ -1,8 +1,31 @@
+import '../styles/about-page.css'
 import { loadConnectWithUs } from "./connectWithUs";
+
+const cards = [
+  {
+    cardType: "main-card",
+    title: "Club History",
+    info: "Find out more about the Bloomfield Fish & Game club.",
+    imgSrc: "../assets/img/truck-group.jpg",    
+  },
+  {
+    cardType: "card",
+    title: "Our Land",
+    info: "Enjoy the Outdoors at the Bloomfield Fish & Game Club.",
+    imgSrc: "../assets/img/fish.jpg",    
+  },
+  {
+    cardType: "card",
+    title: "Our Range",
+    info: "Find out more about our various ranges.",
+    imgSrc: "../assets/img/dog.jpg",    
+  },
+];
 
 function loadAboutPage() {
   loadConnectWithUs();
-  const container = document.querySelector('#content');
+  const container = document.querySelector("#content");
+  container.classList.add('about-page');
 
   const titleContainer = document.createElement('div');
   titleContainer.classList.add('title-container');
