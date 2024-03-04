@@ -1,65 +1,11 @@
 import '../styles/gallery-page.css'
 import { loadConnectWithUs } from "./connectWithUs";
-import { loadEventsPage } from "./eventsPage";
 
-let galleryImgs = [
-  {
-    index: 0,
-    imgSrc: '../assets/img/gallery.jpg',
-  },
-  {
-    index: 1,
-    imgSrc: '../assets/img/gallery1.jpg',
-  },
-  {
-    index: 2,
-    imgSrc: '../assets/img/gallery2.jpg',
-  },
-  {
-    index: 3,
-    imgSrc: '../assets/img/gallery3.jpg',
-  },
-  {
-    index: 4,
-    imgSrc: '../assets/img/gallery14.jpg',
-  },
-  {
-    index: 5,
-    imgSrc: '../assets/img/fish.jpg',
-  },
-  {
-    index: 6,
-    imgSrc: '../assets/img/gallery6.jpg',
-  },
-  {
-    index: 7,
-    imgSrc: '../assets/img/gallery7.jpg',
-  },
-  {
-    index: 8,
-    imgSrc: '../assets/img/gallery9.jpg',
-  },
-  {
-    index: 9,
-    imgSrc: '../assets/img/gallery11.jpg',
-  },
-  {
-    index: 10,
-    imgSrc: '../assets/img/gallery12.jpg',
-  },
-  {
-    index: 11,
-    imgSrc: '../assets/img/gallery13.jpg',
-  },
-  {
-    index: 12,
-    imgSrc: '../assets/img/gallery4.jpg',
-  },
-  {
-    index: 13,
-    imgSrc: '../assets/img/gallery5.jpg',
-  },
-];
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+const images = importAll(require.context('../assets/img/', false, /gallery([0-9]|[0-9][0-9])\.(png|jpe?g|svg)$/));
 
 function loadGalleryPage() {
   loadConnectWithUs();
@@ -89,17 +35,19 @@ function loadGalleryPage() {
   galleryGridArea.appendChild(galleryExpand);
 
   // Gallery
-  galleryImgs.forEach((image) => {
+  let i = 0;
+  images.forEach((image) => {    
     const cell = document.createElement('div');
     cell.classList.add('grid-cell');
     const imageCell = document.createElement('div');
     imageCell.classList.add('gallery-cell');
-    imageCell.style.backgroundImage = `url(${image.imgSrc})`;
-    if (image.index > 11) {
+    imageCell.style.backgroundImage = `url(${image})`;
+    if (i > 11) {
       cell.classList.add('final-grid-row');
     }
     cell.appendChild(imageCell);
     galleryGrid.appendChild(cell);
+    i++
   });
 
   // Gallery expand

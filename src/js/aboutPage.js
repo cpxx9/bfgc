@@ -12,7 +12,7 @@ const cardArr = [
     cardType: "card",
     title: "Our Land",
     info: "Enjoy the Outdoors at the Bloomfield Fish & Game Club.",
-    imgSrc: "../assets/img/fish.jpg",    
+    imgSrc: "../assets/img/gallery8.jpg",    
   },
   {
     cardType: "card",
