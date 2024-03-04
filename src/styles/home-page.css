@@ -76,8 +76,8 @@
   gap: 25px;
 }
 
-.contact-panel-0 hr{
-  margin: 0px 60px;
+.contact-panel-0 hr {
+  align-self: center;
 }
 
 .contact-panel-address {
