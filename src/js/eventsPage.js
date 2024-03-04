@@ -1,3 +1,4 @@
+import '../styles/event-page.css';
 import { loadConnectWithUs } from "./connectWithUs";
 
 function loadEventsPage() {
