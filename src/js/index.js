@@ -46,5 +46,6 @@ document.addEventListener('click', function(e) {
     const module = e.target.dataset.module;
     functions[module]();
     e.target.classList.add('active-btn');
+    scroll(0,0);
   }  
 });
