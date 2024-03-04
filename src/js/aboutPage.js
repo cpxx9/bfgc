@@ -1,24 +1,27 @@
 import '../styles/about-page.css';
 import { loadConnectWithUs } from "./connectWithUs";
+import MainCardImg from '../assets/img/truck-group.jpg';
+import landCardImg from '../assets/img/gallery8.jpg';
+import RangeCardImg from '../assets/img/dog.jpg';
 
 const cardArr = [
   {
     cardType: "main-card",
     title: "Club History",
     info: "Find out more about the Bloomfield Fish & Game club.",
-    imgSrc: "../assets/img/truck-group.jpg",    
+    imgSrc: MainCardImg,    
   },
   {
     cardType: "card",
     title: "Our Land",
     info: "Enjoy the Outdoors at the Bloomfield Fish & Game Club.",
-    imgSrc: "../assets/img/gallery8.jpg",    
+    imgSrc: landCardImg,    
   },
   {
     cardType: "card",
     title: "Our Range",
     info: "Find out more about our various ranges.",
-    imgSrc: "../assets/img/dog.jpg",    
+    imgSrc: RangeCardImg,    
   },
 ];
 
