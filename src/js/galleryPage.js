@@ -104,6 +104,7 @@ function loadGalleryPage() {
 
   // Gallery expand
   const expandText = document.createElement('button');
+  expandText.classList.add('expand-btn');
   expandText.innerText = '+ Show more';
   galleryExpand.appendChild(expandText);
   galleryExpand.addEventListener('click', function() {
