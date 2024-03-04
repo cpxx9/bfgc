@@ -19,10 +19,13 @@ function loadEventsPage() {
 
   const eventsContainer = document.createElement('div');
   eventsContainer.classList.add('events-container');
-  if (!events.length) {
+  if (events.length < 1) {
+    eventsContainer.classList.add('no-events');
     const noEventsTitle = document.createElement('h3');
     noEventsTitle.textContent = 'No upcoming events.';
     eventsContainer.appendChild(noEventsTitle);
+  } else {
+    eventsContainer.classList.add('events');
   }
   
   container.appendChild(titleContainer);

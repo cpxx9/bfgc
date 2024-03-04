@@ -13,8 +13,11 @@
   color: #fff;
 }
 
-.event-page .events-container {
-  text-align: center;
+.event-page .events-container.no-events {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .event-page .events-container h3 {
