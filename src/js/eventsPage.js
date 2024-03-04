@@ -1,7 +1,7 @@
 import { loadConnectWithUs } from "./connectWithUs";
 
 function loadEventsPage() {
-  loadEventsPage();
+  loadConnectWithUs();
   console.log('event test');
 }
 
