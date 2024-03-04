@@ -16,6 +16,33 @@
   align-self: stretch;
 }
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 300px;
+  max-width: 100vw;
+}
+
+.gallery-cell {
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-cell:hover {
+  transform: scale(1.2);
+}
+
+.grid-cell {
+  overflow: hidden;
+}
+
+.final-grid-row {
+  grid-column: span 2;
+}
+
 .gallery-quote {
   background-image: url('../assets/img/quote.jpg');
   background-position: center;

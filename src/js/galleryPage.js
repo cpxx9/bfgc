@@ -20,11 +20,11 @@ let galleryImgs = [
   },
   {
     index: 4,
-    imgSrc: '../assets/img/gallery4.jpg',
+    imgSrc: '../assets/img/gallery14.jpg',
   },
   {
     index: 5,
-    imgSrc: '../assets/img/galler5.jpg',
+    imgSrc: '../assets/img/fish.jpg',
   },
   {
     index: 6,
@@ -40,23 +40,23 @@ let galleryImgs = [
   },
   {
     index: 9,
-    imgSrc: '../assets/img/gallery10.jpg',
-  },
-  {
-    index: 10,
     imgSrc: '../assets/img/gallery11.jpg',
   },
   {
-    index: 11,
+    index: 10,
     imgSrc: '../assets/img/gallery12.jpg',
   },
   {
-    index: 12,
+    index: 11,
     imgSrc: '../assets/img/gallery13.jpg',
   },
   {
+    index: 12,
+    imgSrc: '../assets/img/gallery4.jpg',
+  },
+  {
     index: 13,
-    imgSrc: '../assets/img/gallery14.jpg',
+    imgSrc: '../assets/img/gallery5.jpg',
   },
 ];
 
@@ -87,7 +87,18 @@ function loadGalleryPage() {
   galleryGridArea.appendChild(galleryExpand);
 
   // Grid
-
+  galleryImgs.forEach((image) => {
+    const cell = document.createElement('div');
+    cell.classList.add('grid-cell');
+    const imageCell = document.createElement('div');
+    imageCell.classList.add('gallery-cell');
+    imageCell.style.backgroundImage = `url(${image.imgSrc})`;
+    if (image.index > 11) {
+      cell.classList.add('final-grid-row');
+    }
+    cell.appendChild(imageCell);
+    galleryGrid.appendChild(cell);
+  });
   // Grid expand
 
   // Quote
