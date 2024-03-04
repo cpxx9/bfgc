@@ -159,7 +159,6 @@ function mapPanel(panel) {
 
 function loadHomePage() {
   document.title = "Bloomfield Fish & Game Club";
-  content.className = '';
   const oldFooter = document.querySelector('.connect-footer');
   if(oldFooter){
     oldFooter.remove()

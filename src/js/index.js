@@ -39,6 +39,7 @@ document.addEventListener('click', function(e) {
     })
     
     const currentDOM = document.querySelector('#content');
+    currentDOM.className = '';
     currentDOM.innerHTML = '';
 
     //load new page
