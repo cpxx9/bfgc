@@ -2,7 +2,9 @@ import { loadConnectWithUs } from "./connectWithUs";
 
 function loadGalleryPage() {
   loadConnectWithUs();
-  console.log('gallery test');
+  
+  const content = document.querySelector('#content');
+  content.classList.add('gallery-page');
 }
 
 export { loadGalleryPage };
