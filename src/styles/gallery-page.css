@@ -18,7 +18,32 @@
 
 .gallery-quote {
   background-image: url('../assets/img/quote.jpg');
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  gap: 20px;
+}
+
+.bg-tint {
+  background-color: rgba(200,100,0,.5);
+  background-blend-mode: multiply;
+}
+
+.gallery-quote p {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.quote-text {
+  font-size: 3em;
+  width: 45vw;
+  line-height: 1.2em;
+}
+
+.quote-author {
+  font-size: 1.2em;
 }
