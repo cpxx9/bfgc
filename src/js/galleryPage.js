@@ -1,5 +1,6 @@
 import '../styles/gallery-page.css'
 import { loadConnectWithUs } from "./connectWithUs";
+import { loadEventsPage } from "./eventsPage";
 
 let galleryImgs = [
   {
@@ -69,7 +70,8 @@ function loadGalleryPage() {
   // Page structure
   const galleryEventButton = document.createElement('button');
   galleryEventButton.textContent = 'UPCOMING EVENTS';
-  galleryEventButton.classList.add('std-btn');
+  galleryEventButton.classList.add('std-btn', 'nav-btn');
+  galleryEventButton.dataset.module = 'events';
   const gridQuoteWrapper = document.createElement('div'); 
   gridQuoteWrapper.classList.add('gq-wrapper');
   const galleryGridArea = document.createElement('div');
@@ -78,6 +80,8 @@ function loadGalleryPage() {
   galleryQuote.classList.add('gallery-quote');
   galleryQuote.classList.add('bg-tint');
 
+  // Events button
+  galleryEventButton.addEventListener('click', loadEventsPage);
   // Grid area
   const galleryGrid = document.createElement('div');
   galleryGrid.classList.add('gallery-grid');

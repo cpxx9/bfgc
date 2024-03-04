@@ -7,7 +7,7 @@ import { loadAboutPage } from "./aboutPage";
 let functions = {
   home: loadHomePage,
   gallery: loadGalleryPage,
-  contact: loadEventsPage,
+  events: loadEventsPage,
   about: loadAboutPage,
 };
 
