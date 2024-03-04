@@ -12,7 +12,7 @@
 .gq-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 90px;
   align-self: stretch;
 }
 
@@ -33,6 +33,7 @@
 
 .gallery-cell:hover {
   transform: scale(1.2);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .grid-cell {
