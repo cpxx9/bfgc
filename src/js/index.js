@@ -12,6 +12,7 @@ let functions = {
 };
 
 loadHomePage();
+console.log('test');
 
 const header = document.querySelector('.main-header');
 const observer = new IntersectionObserver(
