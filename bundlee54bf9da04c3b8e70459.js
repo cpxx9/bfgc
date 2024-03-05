@@ -15885,6 +15885,7 @@ var functions = {
   about: loadAboutPage
 };
 loadHomePage();
+console.log('test');
 var header = document.querySelector('.main-header');
 var observer = new IntersectionObserver(function (_ref) {
   var _ref2 = _slicedToArray(_ref, 1),
@@ -15924,4 +15925,4 @@ document.addEventListener('click', function (e) {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle6951e694581c207ecfc1.js.map
+//# sourceMappingURL=bundlee54bf9da04c3b8e70459.js.map
